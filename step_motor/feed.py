@@ -18,6 +18,7 @@ halfstep_seq = [
   [1,0,0,1]
 ]
 
+#for i in range(512):
 #for i in range(170):
 for i in range(82):
     for halfstep in range(8):

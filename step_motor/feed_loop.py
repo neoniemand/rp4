@@ -14,7 +14,7 @@ halfstep_seq = [
 ]
 
 
-meal_time = '13:59','14:00', '14:01', '14:02'
+meal_time = '08:00','12:00', '16:00', '20:00'
 
 
 while(1):
@@ -27,8 +27,10 @@ while(1):
     
     if current_time in meal_time:
         print("meal time : " + current_time)
-#for i in range(170):
-        for i in range(30):
+#        for i in range(1024):
+        for i in range(768):
+#        for i in range(512):
+#        for i in range(30):
             for halfstep in range(8):
                 for pin in range(4):
                     GPIO.output(control_pins[pin], halfstep_seq[halfstep][pin])
