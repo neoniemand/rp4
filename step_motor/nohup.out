@@ -5466,4 +5466,8 @@ no match  : 18:28
 no match  : 18:29
 no match  : 18:30
 no match  : 18:31
-no match  : 18:32
+no match  : 18:32no match  : 19:42
+Traceback (most recent call last):
+  File "feed_loop.py", line 42, in <module>
+    time.sleep(60)
+KeyboardInterrupt

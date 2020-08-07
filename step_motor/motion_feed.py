@@ -22,16 +22,19 @@ while(1):
     for pin in control_pins:
         GPIO.setup(pin, GPIO.OUT)
         GPIO.output(pin, 0)
+    GPIO.setup(PIR_PIN, GPIO.IN)
     
     if GPIO.input(PIR_PIN):
         print("meal time : " + current_time)
-        for i in range(768):
+        for i in range(256):
             for halfstep in range(8):
                 for pin in range(4):
                     GPIO.output(control_pins[pin], halfstep_seq[halfstep][pin])
                 time.sleep(0.001)
+        print("sleep 10")
+        time.sleep(10)
     else:
         print("no match  : " + current_time)
 
     GPIO.cleanup()
-    time.sleep(10)
+    time.sleep(0.5)
