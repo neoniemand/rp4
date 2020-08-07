@@ -9,7 +9,10 @@ GPIO.setup(pirPin, GPIO.IN, GPIO.PUD_UP)
 
 while True:
     if GPIO.input(pirPin) == GPIO.LOW:
-        print("Motion detected !!")
-    else:
         print("No motion")
-    time.sleep(0.2)
+    else:
+        print("Motion detected !!")
+        print("sleep !!")
+        time.sleep(5)
+        print("wake up !!")
+    time.sleep(0.1)
